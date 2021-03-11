@@ -32,6 +32,13 @@ return(
     {operatorKeys}
   </div>
   <div className="submit-container">
+  <Key
+      keyAction={callOperator}
+      keyType="submit-key"
+      keyValue="reset"
+    />
+  </div>
+  <div className="submit-container">
     <Key
       keyAction={callOperator}
       keyType="submit-key"

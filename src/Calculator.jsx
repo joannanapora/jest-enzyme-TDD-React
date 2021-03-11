@@ -6,10 +6,11 @@ import Keypad from './Keypad';
 class Calculator extends Component {
    state = {
     displayValue: '0',
-    numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'c', '0','.'],
+    numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'c', '0','.', 'reset'],
     operators: ['+', '-', 'x', '/'],
     selectedOperator: '',
     storedValue: '',
+    result: ''
   }
 
   callOperator = () => {
@@ -76,6 +77,9 @@ class Calculator extends Component {
   render = () => {
     return (
       <div className="calculator-container" >
+        <div className='calculator-header'>
+          CALCULATOR 2021
+          </div>
       <Display displayValue={this.state.displayValue} />
       <Keypad
         callOperator={this.callOperator}
